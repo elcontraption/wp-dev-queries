@@ -1,7 +1,13 @@
-# Settings
+-------------------------------------------
+# Configuration
+-------------------------------------------
 SET @old_url = 'http://example.com';
 SET @new_url = 'http://example.dev';
 SET @db_prefix = 'wp_';
+
+-------------------------------------------
+# You shouldn't need to edit anything below
+-------------------------------------------
 
 # Set up options table query
 SET @options_query = CONCAT('UPDATE ', @db_prefix, 'options SET option_value = replace(option_value, ?, ?) WHERE option_name = "home" OR option_name = "siteurl"');
