@@ -8,7 +8,7 @@ SET @options_query = CONCAT('UPDATE ', @db_prefix, 'options SET option_value = r
 
 # Set up posts table queries
 SET @posts_query_1 = CONCAT('UPDATE ', @db_prefix, 'posts SET guid = REPLACE (guid, ?, ?)');
-SET @posts_query_2 = CONCAT('UPDATE ', @db_prefix, 'posts SET post_content = REPLACE (guid, ?, ?)');
+SET @posts_query_2 = CONCAT('UPDATE ', @db_prefix, 'posts SET post_content = REPLACE (post_content, ?, ?)');
 
 # Set up postmeta table query
 SET @postmeta_query = CONCAT('UPDATE ', @db_prefix, 'postmeta SET meta_value = REPLACE (meta_value, ?, ?)');
