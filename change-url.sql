@@ -1,6 +1,7 @@
 # -------------------------------------------
 # Configuration
 # -------------------------------------------
+
 SET @old_url = 'http://example.com';
 SET @new_url = 'http://example.dev';
 SET @db_prefix = 'wp_';
